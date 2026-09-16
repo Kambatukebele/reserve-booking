@@ -1,5 +1,6 @@
 import express from "express";
 import serviceRouter from "./routes/service.routes.js";
+import barberRouter from "./routes/barber.routes.js";
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.use(express.urlencoded({ extended: true }));
  *
  * */
 app.use("/", serviceRouter);
+app.use("/", barberRouter);
 
 export default app;
