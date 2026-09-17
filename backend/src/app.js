@@ -2,6 +2,7 @@ import express from "express";
 import serviceRouter from "./routes/service.routes.js";
 import barberRouter from "./routes/barber.routes.js";
 import customerRouter from "./routes/customer.routes.js";
+import appointmentRouter from "./routes/appointment.routes.js";
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", serviceRouter);
 app.use("/", barberRouter);
 app.use("/", customerRouter);
+app.use("/", appointmentRouter);
 
 export default app;
