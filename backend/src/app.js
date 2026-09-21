@@ -3,6 +3,7 @@ import serviceRouter from "./routes/service.routes.js";
 import barberRouter from "./routes/barber.routes.js";
 import customerRouter from "./routes/customer.routes.js";
 import appointmentRouter from "./routes/appointment.routes.js";
+import barber_scheduleRouter from "./routes/barber_schedule.routes.js";
 
 const app = express();
 
@@ -23,5 +24,6 @@ app.use("/", serviceRouter);
 app.use("/", barberRouter);
 app.use("/", customerRouter);
 app.use("/", appointmentRouter);
+app.use("/", barber_scheduleRouter);
 
 export default app;
